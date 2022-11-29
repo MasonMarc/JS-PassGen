@@ -1,17 +1,20 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+
 function generatePassword(){
   // CODE GOES HERE
   var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numbers = "0123456789";
-  var Special = "#$%&'()*+,-./:;<=>?@[\]^_`{|}~!";
+  var Special = "#$%&'()*+,-./:;<=>?@][^_`{|}~!";
   var lowletters = letters.toLowerCase();
   var chooseFrom = "";
+  var passlength = prompt("How many characters do you want your password to be from 1-128 characters");
   var isUppercase = confirm('Would you like to use Uppercase?');
-  var isLowercase = false;
-  var isSpecial = false;
-  var isNumber = false;
+  var isLowercase = confirm('Would you like to use Lowercase?');
+  var isSpecial = confirm('Would you like to use Special Characters?');
+  var isNumber = confirm('Would you like to use Numbers?');
 
   if (isUppercase) {
     //USE UPPERCASE
@@ -28,15 +31,16 @@ function generatePassword(){
   if (isSpecial) {
     //USE Special
     console.log('special');
+    chooseFrom += Special;
+
   }
 
   if (isNumber) {
-    //USE Number
     console.log('number');
+    chooseFrom += numbers;
   }
 
-  chooseFrom += isSpecial;
-  chooseFrom += isNumber;
+  console.log(chooseFrom);
 
   //GRAB RANDOM LETTERS
   
