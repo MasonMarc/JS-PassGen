@@ -45,7 +45,7 @@ function generatePassword(){
 
   //GRAB RANDOM LETTERS
   for (var i = 0;i<=passlength;i++){
-  var rand = Math.floor(Math.random() * passlength.length);
+  var rand = Math.floor(Math.random() * chooseFrom.length);
   passrand += chooseFrom[rand];
   }
 
