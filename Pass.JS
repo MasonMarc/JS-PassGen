@@ -15,6 +15,7 @@ function generatePassword(){
   var isLowercase = confirm('Would you like to use Lowercase?');
   var isSpecial = confirm('Would you like to use Special Characters?');
   var isNumber = confirm('Would you like to use Numbers?');
+  var passrand = "";
 
   if (isUppercase) {
     //USE UPPERCASE
@@ -43,8 +44,12 @@ function generatePassword(){
   console.log(chooseFrom);
 
   //GRAB RANDOM LETTERS
-  
-  return "";
+  for (var i = 0;i<=passlength;i++){
+  var rand = Math.floor(Math.random() * passlength.length);
+  passrand += chooseFrom[rand];
+  }
+
+  return passrand;
 }
 
 // Write password to the #password input
