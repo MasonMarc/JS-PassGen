@@ -10,7 +10,14 @@ function generatePassword(){
   var Special = "#$%&'()*+,-./:;<=>?@][^_`{|}~!";
   var lowletters = letters.toLowerCase();
   var chooseFrom = "";
-  var passlength = prompt("How many characters do you want your password to be from 1-128 characters");
+  var passlength = prompt("How many characters do you want your password to be from 8-128 characters");
+
+for (passlength;passlength <8 || passlength>128;){
+  alert('Please select a valid password length');
+  var passlength = prompt("How many characters do you want your password to be from 8-128 characters");
+
+}
+
   var isUppercase = confirm('Would you like to use Uppercase?');
   var isLowercase = confirm('Would you like to use Lowercase?');
   var isSpecial = confirm('Would you like to use Special Characters?');
@@ -39,6 +46,10 @@ function generatePassword(){
   if (isNumber) {
     console.log('number');
     chooseFrom += numbers;
+  }
+
+  if (chooseFrom ===""){
+    alert('Please select at least one group of characters for the password');
   }
 
   console.log(chooseFrom);
