@@ -1,18 +1,31 @@
 # JS-PassGen
+
 Password Generator in Java Script
 
-GIVEN I need a new, secure password
-<!-- WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria -->
-<!-- WHEN prompted for password criteria
-THEN I select which criteria to include in the password -->
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-<!-- WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters -->
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-<!-- WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria -->
-<!-- WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page -->
+[Link to Site](https://masonmarc.github.io/JS-PassGen/)
+
+[Link to Github Repo](https://github.com/MasonMarc/JS-PassGen)
+
+# Table of Contents
+
+[Descriptions](#descriptions)
+
+[Visuals](#visuals)
+
+[Resources](#resources)
+
+# Descriptions
+
+This project is a password generator using Java Script to make a password between 8-128 characters long
+
+# Visuals
+
+![website image](./assets/Passgensh.png)
+
+# Resources
+
+[String Help](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+
+[Array Help](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString)
+
+[for loop Help](https://www.w3schools.com/js/js_loop_for.asp)
