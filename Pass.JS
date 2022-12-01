@@ -59,15 +59,12 @@ function generatePassword() {
 
   var isit = !isNumber && !isSpecial && !isLowercase && !isUppercase;
   console.log(isit);
-  for (; isit; ) {
+  if (isit) {
 
     alert('Please select at least one group of characters for the password');
     getchoices();
-
-    if(isit= false){
-      return;
-    }
-  }
+    return "";
+  } 
   // I tried to make it to where you had to select one input but it broke on the second time every time :( 
 
   console.log(chooseFrom);
