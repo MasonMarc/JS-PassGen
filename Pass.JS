@@ -2,7 +2,6 @@
 var generateBtn = document.querySelector("#generate");
 
 
-
 function generatePassword() {
   var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numbers = "0123456789";
@@ -24,7 +23,6 @@ function generatePassword() {
 
   function getchoices() {
 
-
     isUppercase = confirm('Would you like to use Uppercase?');
     isLowercase = confirm('Would you like to use Lowercase?');
     isSpecial = confirm('Would you like to use Special Characters?');
@@ -33,23 +31,19 @@ function generatePassword() {
 
     if (isUppercase) {
       //USE UPPERCASE
-      console.log('uppercase');
       chooseFrom += letters;
     }
     if (isLowercase) {
       //USE LOWERCASE
-      console.log('lowercase');
       chooseFrom += lowletters;
     }
     if (isSpecial) {
       //USE Special
-      console.log('special');
       chooseFrom += Special;
 
     }
     if (isNumber) {
-      // USE Number
-      console.log('number');
+      // USE Number      
       chooseFrom += numbers;
     }
 
@@ -58,16 +52,13 @@ function generatePassword() {
   getchoices();
 
   var isit = !isNumber && !isSpecial && !isLowercase && !isUppercase;
-  console.log(isit);
   if (isit) {
 
     alert('Please select at least one group of characters for the password');
     getchoices();
     return "";
-  } 
-  // I tried to make it to where you had to select one input but it broke on the second time every time :( 
-
-  console.log(chooseFrom);
+  }
+  // I tried to make it to where you had to select one input and it looped every time but i could never get it past a second time :( 
 
   //GRAB RANDOM LETTERS
   for (var i = 0; i <= passlength; i++) {
